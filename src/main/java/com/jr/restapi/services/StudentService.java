@@ -4,7 +4,6 @@ import com.jr.restapi.dtos.StudentGetDto;
 import com.jr.restapi.dtos.StudentPostDto;
 import com.jr.restapi.entities.StudentEntity;
 import com.jr.restapi.repositories.StudentRepository;
-import org.hibernate.engine.jdbc.env.internal.DefaultSchemaNameResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
