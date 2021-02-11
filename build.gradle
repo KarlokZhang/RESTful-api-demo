@@ -4,6 +4,10 @@ plugins {
 	id 'java'
 }
 
+ext{
+	mockitoVersion = '3.5.15'
+}
+
 group = 'com.jr'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '11'
@@ -25,6 +29,12 @@ dependencies {
 	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	testImplementation "org.mockito:mockito-core:${mockitoVersion}"
+	testImplementation "org.mockito:mockito-junit-jupiter:${mockitoVersion}"
+	testImplementation('org.springframework.boot:spring-boot-starter-test'){
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
 }
 
 test {
